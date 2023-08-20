@@ -140,16 +140,18 @@
             <!-- Coupon Section -->
             <section class="w-1/4 p-4 rounded shadow ml-4">
                 <h2 class="text-lg font-semibold">Have coupon?</h2>
-                <div class="flex">
-                    <input type="text" class="border p-2 rounded-l" placeholder="Coupon code">
-                    <button class="bg-[#E527B2] text-white px-4 py-2 rounded-r" >Apply</button>
+                <div class="flex mb-4">
+                    <input id="coupon-input" type="text" class="border p-2 rounded-l" placeholder="Coupon code">
+                    <button onclick="handleClickBtn(this)"   id="apply" class="bg-[#E527B2] text-white px-4 py-2 rounded-r" >Apply</button>
                 </div>
-                <div class="selected-items" id="selected-items">
+                <div class="selected-items mb-4" id="selected-items">
                 </div>
-                <h6>Total Price: <span id="total">00</span>TK</h6>
+                <hr>
+                <h6 class="mt-4">Total Price: <span id="total">00</span>TK</h6>
                 <h6>Dicount: <span id="discount">00</span>TK</h6>
-                <h6>Total: <span id ="dis-total">00</span>TK</h6>
-                <button class="mt-2 bg-[#E527B2] text-white px-4 py-2 rounded">Make Purchase</button>
+                <h6>Amount to be Paid: <span id ="dis-total">00</span>TK</h6>
+                <hr class="mt-4">
+                <button id="purchase" class="mt-6 bg-[#E527B2] text-white px-4 py-2 rounded w-full">Make Purchase</button>
                
             </section>
         </div>
