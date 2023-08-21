@@ -142,7 +142,7 @@
                 <h2 class="text-lg font-semibold">Have coupon?</h2>
                 <div class="flex mb-4">
                     <input id="coupon-input" type="text" class="border p-2 rounded-l" placeholder="Coupon code">
-                    <button onclick="handleClickBtn(this)"   id="apply" class="bg-[#E527B2] text-white px-4 py-2 rounded-r" >Apply</button>
+                    <button onclick="handleClickBtn(this)"id="apply" class="bg-[#E527B2] text-white px-4 py-2 rounded-r" >Apply</button>
                 </div>
                 <div class="selected-items mb-4" id="selected-items">
                 </div>
@@ -151,7 +151,21 @@
                 <h6>Dicount: <span id="discount">00</span>TK</h6>
                 <h6>Amount to be Paid: <span id ="dis-total">00</span>TK</h6>
                 <hr class="mt-4">
-                <button id="purchase" class="mt-6 bg-[#E527B2] text-white px-4 py-2 rounded w-full">Make Purchase</button>
+                <button onclick="my_modal_1.showModal()" id="purchase" class="mt-6 bg-[#E527B2] text-white px-4 py-2 rounded w-full">Make Purchase</button>
+             
+             
+                <!-- Open the modal using ID.showModal() method -->
+                    <dialog onclick="my_modal_1.showModal()" id="my_modal_1" class="modal">
+                      <form method="dialog" class="modal-box" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                        <img class="items-center" src="./images/congo.png" alt="">
+                        <h3 class="font-bold text-lg">Congratulations!</h3>
+                        <p class="py-4">You Purchased the product successfully.</p>
+                        <div class="modal-action">
+                          <!-- if there is a button in form, it will close the modal -->
+                          <button class="btn bg-[#E527B2] text-white" onclick="resetAndGoHome()">Go Home</button>
+                        </div>
+                      </form>
+                    </dialog>
                
             </section>
         </div>
