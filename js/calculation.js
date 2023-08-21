@@ -7,6 +7,7 @@ const applyButton = document.getElementById("apply");
 applyButton.disabled = true;
 
 function handleClickBtn(target) {
+    if(target.getAttribute("data-action") === "add-to-cart"){
     const selectedItemContainer = document.getElementById("selected-items");
     const count = selectedItemContainer.childElementCount;
     const itemName = target.parentNode.childNodes[3].innerText;
@@ -33,6 +34,7 @@ function handleClickBtn(target) {
         
     }
     
+    }
   
 
 
